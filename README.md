@@ -27,9 +27,9 @@
 
 
 ## Используемые технологии
-- Python 3.9,
-- Django 3.2,
-- DRF,
+- Python 3.9
+- Django 3.2
+- DRF
 - JWT + Djoser
 
 
