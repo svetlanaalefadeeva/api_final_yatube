@@ -17,7 +17,7 @@ from .serializers import (CommentSerializer,
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    permission_classes = [AllowAny, ]
+    permission_classes = [AllowAny]
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -45,8 +45,8 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 class FollowViewSet(CreateListRetrieveViewSet):
     serializer_class = FollowSerializer
-    permission_classes = [IsAuthenticated, ]
-    filter_backends = (filters.SearchFilter, )
+    permission_classes = [IsAuthenticated]
+    filter_backends = (filters.SearchFilter,)
     search_fields = ('following__username',)
 
     def get_queryset(self):
