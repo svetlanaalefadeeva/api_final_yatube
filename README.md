@@ -5,33 +5,48 @@
 >- Просматривать и создавать группы.
 >- Комментировать, смотреть, удалять и обновлять комментарии.
 
-
 ## 
 * [Запуск проекта](#Запуск-проекта)
 * [Используемые технологии](#Используемые-технологии)
 * [Примеры запросов](#Примеры-запросов)
 * [Автор](#Автор)
 
-
 ## Запуск проекта
-- Для начала Вам необходимо склонировать репозиторий к себе в рабочую область.
-- Создать и активировать виртуальное окружение.
-- python(python3 on *nix system) -m venv venv
-- source venv/Scripts/activate (source venv/bin/activate for *nix system)
-- Установить зависимости / Install dependencies
-- pip install -r requirements.txt
-- Выполнить миграции / Perform migrations
-- python(python3 on *nix system) manage.py migrate
-- Запустить проект на локальном компьютере / Run the project on the local computer
-- python(python3 on *nix system) manage.py runserver
-
+Клонировать репозиторий и перейти в него в командной строке:
+```
+git clone git@github.com:svetlanaalefadeeva/api_final_yatube.git
+```
+```
+cd yatube_api
+```
+Создать и активировать виртуальное окружение:
+```
+python3 -m venv env
+```
+```
+source env/bin/activate
+```
+```
+python3 -m pip install --upgrade pip
+```
+Установить зависимости:
+```
+pip install -r requirements.txt
+```
+Выполнить миграции:
+```
+python3 manage.py migrate
+```
+Запустить проект:
+```
+python3 manage.py runserver
+```
 
 ## Используемые технологии
 - Python 3.9
 - Django 3.2
 - DRF
 - JWT + Djoser
-
 
 ## Примеры запросов
 - [http://127.0.0.1:8000/api/v1/users/]() - регистрация нового пользователя
@@ -40,7 +55,6 @@
 - [http://127.0.0.1:8000/api/v1/posts/]() - список постов 
 - [http://127.0.0.1:8000/api/v1/group/]() - список групп
 - [http://127.0.0.1:8000/api/v1/posts/{id_posts}/comments/]() - получить список комментариев
-
 
 ## Автор
 Created by [@Me](https://)
